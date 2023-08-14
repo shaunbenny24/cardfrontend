@@ -32,10 +32,10 @@
   --quick-silver: hsl(0, 1%, 65%);
   --light-gray-1: hsl(0, 0%, 80%);
   --light-gray-2: hsl(0, 2%, 82%);
-  --marigold_75: hsla(42, 99%, 46%, 0.75);
+  --marigold_75: #1cb33cdb;
   --xiketic_90: hsla(280, 37%, 8%, 0.9);
   --cultured-2: hsl(0, 0%, 97%);
-  --marigold: hsl(42, 99%, 46%);
+  --marigold:#1cb33cdb;
   --platinum: hsl(0, 0%, 89%);
   --dim-gray: hsl(0, 0%, 42%);
   --white_15: hsla(0, 0%, 100%, 0.15);
@@ -197,7 +197,7 @@ body {
 
 :is(.h1, .h2, .h3, .card-price) .span {
   display: inline-block;
-  color: var(--marigold);
+  color: #1cb33cdb;
 }
 
 .btn {
@@ -232,7 +232,7 @@ body {
   left: calc(100% + 8px);
   width: 5px;
   transform: skewX(-16deg) translateX(var(--translateX, 0));
-  background-color: var(--marigold);
+  background-color: #1cb33cdb;
   transition: var(--transition);
 }
 
@@ -248,9 +248,9 @@ body {
 
 .has-scrollbar::-webkit-scrollbar { height: 10px; }
 
-.has-scrollbar::-webkit-scrollbar-track { outline: 3px solid var(--marigold); }
+.has-scrollbar::-webkit-scrollbar-track { outline: 3px solid #1cb33cdb; }
 
-.has-scrollbar::-webkit-scrollbar-thumb { background-color: var(--marigold); }
+.has-scrollbar::-webkit-scrollbar-thumb { background-color: #1cb33cdb; }
 
 .has-scrollbar::-webkit-scrollbar-button { width: calc(25% - 40px); }
 
@@ -376,7 +376,7 @@ body {
 }
 
 .search-btn {
-  color: var(--marigold);
+  color: #1cb33cdb;
   padding: 13px;
   box-shadow: var(--shadow-1);
   border-radius: 4px;
@@ -479,7 +479,7 @@ body {
   right: 20px;
   transform: translateY(-50%);
   font-size: 25px;
-  color: var(--marigold);
+  color: #1cb33cdb;
 }
 
 .search-container .search-submit ion-icon { --ionicon-stroke-width: 70px; }
@@ -526,7 +526,7 @@ body {
   align-items: center;
 }
 .hero-subtitle {
-  color: var(--marigold);
+  color: #1cb33cdb;
   font-size: var(--fs-6);
   font-weight: var(--fw-700);
   text-transform: uppercase;
@@ -624,7 +624,7 @@ body {
   transition: var(--transition);
 }
 
-.latest-game-card .card-title:is(:hover, :focus) { color: var(--marigold); }
+.latest-game-card .card-title:is(:hover, :focus) { color: #1cb33cdb; }
 
 .latest-game-card .card-price {
   color: var(--silver);
@@ -665,7 +665,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--marigold);
+  color: #1cb33cdb;
   font-size: 60px;
 }
 
@@ -693,7 +693,7 @@ body {
 .live-match-detail { margin-block: 50px; }
 
 .live-match-subtitle {
-  background-color: var(--marigold);
+  background-color: #1cb33cdb;
   color: var(--white);
   font-size: var(--fs-9);
   text-transform: uppercase;
@@ -769,7 +769,7 @@ body {
 .featured-game-card .card-content .card-meta { color: var(--platinum); }
 
 .featured-game-card .card-content ion-icon {
-  color: var(--marigold);
+  color: #1cb33cdb;
   font-size: 14px;
 }
 
@@ -830,13 +830,13 @@ body {
   margin-block-end: 10px;
 }
 
-.shop-card .card-title:is(:hover, :focus) { color: var(--marigold); }
+.shop-card .card-title:is(:hover, :focus) { color: #1cb33cdb; }
 
 .shop-card .card-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--marigold);
+  color: #1cb33cdb;
 }
 
 .shop-card .card-price {
@@ -854,9 +854,9 @@ body {
 }
 
 .shop-card .card-btn:is(:hover, :focus) {
-  background-color: var(--marigold);
+  background-color: #1cb33cdb;
   color: var(--xiketic);
-  border-color: var(--marigold);
+  border-color: #1cb33cdb;
 }
 
 
@@ -901,12 +901,12 @@ body {
 
 .blog-card .card-meta-item ion-icon {
   --ionicon-stroke-width: 50px;
-  color: var(--marigold);
+  color: #1cb33cdb;
 }
 
 .blog-card .card-meta-item a.item-text { transition: var(--transition); }
 
-.blog-card .card-meta-item a.item-text:is(:hover, :focus) { color: var(--marigold); }
+.blog-card .card-meta-item a.item-text:is(:hover, :focus) { color: #1cb33cdb; }
 
 .blog-card .card-title {
   color: var(--raisin-black-1);
@@ -919,7 +919,7 @@ body {
   transition: var(--transition);
 }
 
-.blog-card .card-title:is(:hover, :focus) { color: var(--marigold); }
+.blog-card .card-title:is(:hover, :focus) { color: #1cb33cdb; }
 
 .blog-card .card-text {
   color: var(--dim-gray);
@@ -941,7 +941,7 @@ body {
 }
 
 .blog-card .card-link ion-icon,
-.blog-card .card-link:is(:hover, :focus) { color: var(--marigold); }
+.blog-card .card-link:is(:hover, :focus) { color: #1cb33cdb; }
 
 
 
@@ -987,7 +987,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   left: 20px;
-  color: var(--marigold);
+  color: #1cb33cdb;
   --ionicon-stroke-width: 50px;
 }
 
@@ -1012,7 +1012,7 @@ body {
   transition: var(--transition);
 }
 
-.newsletter-btn:is(:hover, :focus) { color: var(--marigold); }
+.newsletter-btn:is(:hover, :focus) { color: #1cb33cdb; }
 
 .newsletter-btn:is(:hover, :focus)::before { background-color: var(--white); }
 
@@ -1074,7 +1074,7 @@ body {
   left: 0;
   width: 30px;
   height: 3px;
-  background-color: var(--marigold);
+  background-color: #1cb33cdb;
 }
 
 .footer-link {
@@ -1086,7 +1086,7 @@ body {
 }
 
 .footer-link:is(:hover, :focus) {
-  color: var(--marigold);
+  color: #1cb33cdb;
   transform: translateX(5px);
 }
 
@@ -1119,7 +1119,7 @@ body {
   right: 0;
   height: 100%;
   width: 53px;
-  background-color: var(--marigold);
+  background-color: #1cb33cdb;
   color: var(--xiketic);
   display: grid;
   place-content: center;
@@ -1141,7 +1141,7 @@ body {
 
 .copyright-link {
   display: inline-block;
-  color: var(--marigold);
+  color: #1cb33cdb;
 }
 
 
@@ -1156,7 +1156,7 @@ body {
   position: fixed;
   bottom: 10px;
   right: 15px;
-  background-color: var(--marigold);
+  background-color: #1cb33cdb;
   padding: 12px;
   z-index: 4;
   transition: var(--transition);
@@ -1214,7 +1214,7 @@ body {
     position: absolute;
     top: -6px;
     right: -10px;
-    background-color: var(--marigold);
+    background-color: #1cb33cdb;
     color: var(--eerie-black-1);
     font-size: var(--fs-11);
     border-radius: 20px;
@@ -1457,7 +1457,7 @@ body {
 
   .header .social-link {
     background-color: var(--jet);
-    color: var(--marigold);
+    color: #1cb33cdb;
     font-size: var(--fs-9);
     padding: 8px 10px;
   }

@@ -5,54 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #111111;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
- 
+    background: url("assets/image/1000_F_122068289_caFzxjaUL9wzG3PuoFxdHjBmChpNTMwv-transformed.jpeg")no-repeat center center fixed ;
+    background-size:cover;
+
+
   }
 
   .containercard {
-    background: url("https://media.istockphoto.com/id/1353286754/photo/futuristic-image-with-neon-lights-3d-render.jpg?b=1&s=170667a&w=0&k=20&c=T9_xz-hqYIMCoT356ejWT6HHkf4U_at_cmcXzGUYq1g=") no-repeat center center fixed;
-    background-size: cover;
-    padding: 107px;
+    background: white;
+    padding: 30px;
     border-radius: 10px;
-    color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
+    max-width: 500px;
+    color: black;
   }
 
   .cards {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
 
-.card {
-  width: 100px;
-  height: 150px;
-  background-color: #ddd;
-  border: 2px solid #aaa;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: border-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 5px; /* Add some margin for spacing between cards */
-}
+  .card {
+    width: calc(25% - 10px);
+    height: 150px;
+    background-color: #ddd;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+  }
 
-.card img {
-  max-width: 100%;
-  max-height: 100%;
-}
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-.card:hover {
-  border-color: #333;
-}
-
+  .card.selected {
+    border-color: #00b894;
+    box-shadow: 0px 0px 20px rgba(0, 184, 148, 0.5);
+    transform: scale(1.05);
+  }
 
   .bet-options {
     display: flex;
@@ -66,55 +71,134 @@
     align-items: center;
   }
 
-  .clear-button {
-    background-color: #f44336;
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .clear-button, .ok-button {
+    background-color:#1cb33cdb;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s;
   }
 
-  .clear-button:hover {
-    background-color: #d32f2f;
+  .clear-button:hover, .ok-button:hover {
+    background-color:#1cb33cdb;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: black;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .logo h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+    color: black;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .username-icon {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    background-color:#1cb33cdb;
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  .username-icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  .username {
+    color: white;
   }
 </style>
 <title>Gaming UI</title>
 </head>
 <body>
-<div class="containercard">
-    <h2>Select a Card:</h2>
-    <div class="cards">
-        <div class="card" data-card="1"><img src="./assets/image/card1.png"></div>
-        <div class="card" data-card="2"><img src="./assets/image/card2.png"></div>
-        <div class="card" data-card="3"><img src="./assets/image/card3.png"></div>
-        <div class="card" data-card="4"><img src="./assets/image/card4.png"></div>
+
+  <div class="containercard">
+    <header class="navbar">
+      <div class="logo">
+        <img src="./assets/image/logo.webp" alt="Logo">
+        <h1>CARD BET & WIN</h1>
       </div>
-      
-  <h2>Select Bet Amount:</h2>
-  <div class="bet-options">
-    <label class="bet-option">
-      <input type="checkbox" name="bet" value="50">
-      $50
-    </label>
-    <label class="bet-option">
-      <input type="checkbox" name="bet" value="100">
-      $100
-    </label>
-    <label class="bet-option">
-      <input type="checkbox" name="bet" value="150">
-      $150
-    </label>
-    <label class="bet-option">
-      <input type="checkbox" name="bet" value="200">
-      $200
-    </label>
+      <div class="user-info">
+        <div class="username-icon">
+          <img src="./assets/images/featured-game-3.jpg" alt="Username">
+          <span class="username">SB</span>
+        </div>
+        <span class="wallet-amount">$500</span>
+      </div>
+    </header>
+
+    <h2></h2>
+    <div class="cards">
+      <div class="card" data-card="1"><img src="./assets/image/card1.png" alt="Card 1"></div>
+      <div class="card" data-card="2"><img src="./assets/image/card2.png" alt="Card 2"></div>
+      <div class="card" data-card="3"><img src="./assets/image/card3.png" alt="Card 3"></div>
+      <div class="card" data-card="4"><img src="./assets/image/card4.png" alt="Card 4"></div>
+    </div>
+
+    <h2>Select Bet Amount:</h2>
+    <div class="bet-options">
+      <label class="bet-option">
+        <input type="checkbox" name="bet" value="50">
+        $50
+      </label>
+      <label class="bet-option">
+        <input type="checkbox" name="bet" value="100">
+        $100
+      </label>
+      <label class="bet-option">
+        <input type="checkbox" name="bet" value="150">
+        $150
+      </label>
+      <label class="bet-option">
+        <input type="checkbox" name="bet" value="200">
+        $200
+      </label>
+    </div>
+
+    <div class="button-container">
+      <button class="clear-button">Clear</button>
+      <button class="ok-button">OK</button>
+    </div>
   </div>
 
-  <button class="clear-button">Clear </button>
-
-  <button class="clear-button">OK </button>
-</div>
 </body>
 </html>

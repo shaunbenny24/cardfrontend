@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CardGame</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <style>
+      
+      
+        .containercard {
+          background: url("https://media.istockphoto.com/id/1353286754/photo/futuristic-image-with-neon-lights-3d-render.jpg?b=1&s=170667a&w=0&k=20&c=T9_xz-hqYIMCoT356ejWT6HHkf4U_at_cmcXzGUYq1g=") no-repeat center center fixed;
+          background-size: cover;
+          padding: 107px;
+          border-radius: 10px;
+          color: white;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          text-align: center;
+        }
+      
+        .cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .card {
+        width: 100px;
+        height: 150px;
+        background-color: #ddd;
+        border: 2px solid #aaa;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px; /* Add some margin for spacing between cards */
+      }
+      
+      .card img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      
+      .card:hover {
+        border-color: #333;
+      }
+      
+      
+        .bet-options {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-bottom: 20px;
+        }
+      
+        .bet-option {
+          display: flex;
+          align-items: center;
+        }
+      
+        .clear-button {
+          background-color: #f44336;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+      
+        .clear-button:hover {
+          background-color: #d32f2f;
+        }
+      </style>
+  <!-- 
+    - preload images
+  -->
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header">
+
+    <!-- <div class="header-top">
+      <div class="container">
+
+        <div class="countdown-text">
+          Exclusive Black Friday ! Offer <span class="span skewBg">10</span> Days
+        </div>
+
+        <div class="social-wrapper">
+
+          <p class="social-title">Follow us on :</p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div> -->
+
+    <div class="header-bottom skewBg" data-header>
+      <div class="container">
+
+        <a href="#" class="logo"> MAGIC CARD BET </a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+
+            <li class="navbar-item">
+              <a href="#home" class="navbar-link skewBg" data-nav-link>Profile</a>
+            </li>
+
+          
+
+            <li class="navbar-item">
+              <a href="#features" class="navbar-link skewBg" data-nav-link>Features</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#shop" class="navbar-link skewBg" data-nav-link>Refer</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#blog" class="navbar-link skewBg" data-nav-link>Wallet</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#" class="navbar-link skewBg" data-nav-link>Logout</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+
+          <button class="cart-btn" aria-label="cart">
+            <ion-icon name="wallet"></ion-icon>
+
+
+            <span class="cart-badge">0</span>
+          </button>
+
+          <button class="search-btn" aria-label="open search" data-search-toggler>
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+          <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+            <ion-icon name="menu-outline" class="menu"></ion-icon>
+            <ion-icon name="close-outline" class="close"></ion-icon>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+  <!-- 
+    - #SEARCH BOX
+  -->
+
+  <div class="search-container" data-search-box>
+
+    <div class="input-wrapper">
+      <input type="search" name="search" aria-label="search" placeholder="Search here..." class="search-field">
+
+      <button class="search-submit" aria-label="submit search" data-search-toggler>
+        <ion-icon name="search-outline"></ion-icon>
+      </button>
+
+      <button class="search-close" aria-label="close search" data-search-toggler></button>
+    </div>
+
+  </div>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" aria-label="home"
+        style="background-image: url('./assets/images/hero-bg.jpg')">
+      
+            <div class="containercard">
+                <h2>Select a Card:</h2>
+                <div class="cards">
+                    <div class="card" data-card="1"><img src="./assets/image/card1.png"></div>
+                    <div class="card" data-card="2"><img src="./assets/image/card2.png"></div>
+                    <div class="card" data-card="3"><img src="./assets/image/card3.png"></div>
+                    <div class="card" data-card="4"><img src="./assets/image/card4.png"></div>
+                  </div>
+                  
+              <h2>Select Bet Amount:</h2>
+              <div class="bet-options">
+                <label class="bet-option">
+                  <input type="checkbox" name="bet" value="50">
+                  $50
+                </label>
+                <label class="bet-option">
+                  <input type="checkbox" name="bet" value="100">
+                  $100
+                </label>
+                <label class="bet-option">
+                  <input type="checkbox" name="bet" value="150">
+                  $150
+                </label>
+                <label class="bet-option">
+                  <input type="checkbox" name="bet" value="200">
+                  $200
+                </label>
+              </div>
+            
+              <button class="clear-button">Clear </button>
+            
+              <button class="clear-button">OK </button>
+            </div>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #BRAND
+      -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 
+        - #NEWSLETTER
+      -->
+
+
+    </article>
+  </main>
+
+
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

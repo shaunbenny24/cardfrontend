@@ -513,6 +513,18 @@ body {
   align-items: center;
 }
 
+
+
+.hero1 {
+  --section-padding: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
 .hero-subtitle {
   color: var(--marigold);
   font-size: var(--fs-6);
@@ -621,6 +633,9 @@ body {
 }
 
 .latest-game-card .card-price .span { margin-inline-start: 5px; }
+
+
+
 
 
 
@@ -1692,3 +1707,6 @@ body {
   .footer .container { grid-template-columns: 1fr 0.7fr 0.7fr 1fr; }
 
 }
+
+
+

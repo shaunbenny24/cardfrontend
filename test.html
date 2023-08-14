@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+ 
+  }
+
+  .containercard {
+    background: url("https://media.istockphoto.com/id/1353286754/photo/futuristic-image-with-neon-lights-3d-render.jpg?b=1&s=170667a&w=0&k=20&c=T9_xz-hqYIMCoT356ejWT6HHkf4U_at_cmcXzGUYq1g=") no-repeat center center fixed;
+    background-size: cover;
+    padding: 107px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  background-color: #ddd;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px; /* Add some margin for spacing between cards */
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card:hover {
+  border-color: #333;
+}
+
+
+  .bet-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .bet-option {
+    display: flex;
+    align-items: center;
+  }
+
+  .clear-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .clear-button:hover {
+    background-color: #d32f2f;
+  }
+</style>
+<title>Gaming UI</title>
+</head>
+<body>
+<div class="containercard">
+    <h2>Select a Card:</h2>
+    <div class="cards">
+        <div class="card" data-card="1"><img src="./assets/image/card1.png"></div>
+        <div class="card" data-card="2"><img src="./assets/image/card2.png"></div>
+        <div class="card" data-card="3"><img src="./assets/image/card3.png"></div>
+        <div class="card" data-card="4"><img src="./assets/image/card4.png"></div>
+      </div>
+      
+  <h2>Select Bet Amount:</h2>
+  <div class="bet-options">
+    <label class="bet-option">
+      <input type="checkbox" name="bet" value="50">
+      $50
+    </label>
+    <label class="bet-option">
+      <input type="checkbox" name="bet" value="100">
+      $100
+    </label>
+    <label class="bet-option">
+      <input type="checkbox" name="bet" value="150">
+      $150
+    </label>
+    <label class="bet-option">
+      <input type="checkbox" name="bet" value="200">
+      $200
+    </label>
+  </div>
+
+  <button class="clear-button">Clear </button>
+
+  <button class="clear-button">OK </button>
+</div>
+</body>
+</html>
